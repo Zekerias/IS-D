@@ -178,7 +178,7 @@ class MainWindow(QMainWindow):
     #Translate Button
     def translation(self):
         try:
-            translator = Translator(service_urls=['translate.googleapis.com'])
+            translator = Translator(service_urls=['translate.google.com','translate.googleapis.com'])
             FindPlane=str(self.Find.text())
             trad = translator.translate(f'{FindPlane}',dest=f'{lang_destinition}')
             traductor= str(trad.text[:1].upper()+trad.text[1:])
